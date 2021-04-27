@@ -1,0 +1,30 @@
+<div ng-controller="View1Ctrl">
+
+	<header>
+		<h1>Login</h1>
+		<nav>
+			<ul>
+				<li ng-show="false"><a id="homeLink" ui-sref="home">Home</a></li>
+				<li><a ui-sref="register">Register</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="formDiv">
+		<form class="form" onsubmit="event.preventDefault()">
+			
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" name="username" id="username" ng-model="username"><br>
+			</div>
+			
+			<div class="form-group">
+				<label for="password" >Password</label>
+				<input type="password" name="password" id="password" ng-model="password"><br>
+			</div>
+			
+			<button type="submit" ng-click="loginUser()" class="btn btn-primary">Submit</button>
+			<button ng-click="reset()" id="reset" class="btn btn-secondary">Reset</button>
+		</form>
+		
+	</div>
+</div>
